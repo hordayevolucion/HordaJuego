@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horda y Evolución - Manual Oficial</title>
+    
+    <style>
+        /* 1. DECLARACIÓN DE FUENTE Y ESTILOS GENERALES */
+        @font-face {
+            font-family: 'IMFellEnglishSC';
+            src: url('Font/IMFellEnglishSC-Regular.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Fondo casi negro */
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 2. DISEÑO DEL ENCABEZADO (HEADER) */
+        header {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/image_56695f.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #4a0000;
+        }
+
+        .logo-hye {
+            width: 180px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'IMFellEnglishSC', serif;
+            font-size: 3.5em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .tagline {
+            font-family: 'IMFellEnglishSC', serif;
+            font-size: 1.5em;
+            color: #d4af37;
+        }
+
+        /* 3. DISEÑO DE LAS SECCIONES DE REGLAS */
+        .rule-section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-bottom: 1px solid #333;
+        }
+
+        .rule-container {
+            display: flex;
+            flex-wrap: wrap; /* Para que en celular se ponga uno abajo de otro */
+            align-items: center;
+            gap: 40px;
+        }
+
+        .rule-text {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .rule-text h2 {
+            font-family: 'IMFellEnglishSC', serif;
+            color: #d4af37;
+            font-size: 2.2em;
+            margin-top: 0;
+        }
+
+        .rule-text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .rule-visual {
+            flex: 1;
+            min-width: 320px;
+            text-align: center;
+        }
+
+        .rule-visual img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #4a0000;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+        }
+
+        strong {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Images/HyE2.png" alt="Logo" class="logo-hye">
+        <h1>HORDA Y EVOLUCIÓN</h1>
+        <div class="tagline">Donde la estrategia define tu destino</div>
+    </header>
+
+    <section class="rule-section">
+        <div class="rule-container">
+            <div class="rule-text">
+                <h2>Regla 1: Tablero e Inicio</h2>
+                <p>Se juega en un tablero de <strong>7x7 casillas</strong>.</p>
+                <p>Cada jugador (Azul y Rojo) comienza con un Soldado en cada una de sus cuatro esquinas.</p>
+            </div>
+            <div class="rule-visual">
+                <img src="Images/Regla1.png" alt="Tablero Inicial">
+            </div>
+        </div>
+    </section>
+
+<section class="rule-section">
+    <div class="rule-container reverse">
+        
+        <div class="rule-visual">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <video loop playsinline controls class="video-manual">
+                        <source src="Videos/Regla2a.mp4" type="video/mp4">
+                    </video>
+                    <p><small>A) Movimiento Adyacente (Crea Soldado)</small></p>
+                </div>
+                
+                <div>
+                    <video loop playsinline controls class="video-manual">
+                        <source src="Videos/Regla2b.mp4" type="video/mp4">
+                    </video>
+                    <p><small>B) Movimiento Largo / Tipo L (Solo desplazamiento)</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rule-text">
+            <h2>Regla 2: Movimiento</h2>
+            <p><strong>Soldados y Criaturas:</strong></p>
+            <p><strong>1. Casilla Adyacente:</strong> Al moverte a una casilla vecina (horizontal, vertical o diagonal), la unidad se desplaza y <strong>se crea un nuevo Soldado básico</strong> de tu color en la casilla de origen.</p>
+            <hr style="border: 0; border-top: 1px solid #444; margin: 20px 0;">
+            <p><strong>2. Dos casillas o Tipo "L":</strong> La unidad se mueve a mayor distancia, pero <strong>no genera ninguna unidad</strong> en la casilla de origen. Ideal para ataques rápidos o repliegues.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section">
+    <div class="rule-container"> <div class="rule-text">
+            <h2>Regla 3: Captura de Unidades</h2>
+            <p><strong>El Arte de la Conversión:</strong></p>
+            <p>La captura ocurre cuando mueves una de tus unidades a una casilla <strong>adyacente</strong> (vecina) a una o varias unidades enemigas.</p>
+            <hr style="border: 0; border-top: 1px solid #444; margin: 20px 0;">
+            <p><strong>Impacto en la Horda:</strong> Al aterrizar, todas las unidades enemigas que toquen a tu unidad se transforman inmediatamente en Soldados de tu color.</p>
+            <p><em>¡Un solo movimiento estratégico puede convertir a todo un batallón enemigo a tu causa!</em></p>
+        </div>
+
+        <div class="rule-visual">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <video loop playsinline controls class="video-manual" style="width: 100%; border: 2px solid #4a0000;">
+                        <source src="Videos/Regla3a.mp4" type="video/mp4">
+                    </video>
+                    <p><small>A) Captura Simple (1 vs 1)</small></p>
+                </div>
+                
+                <div>
+                    <video loop playsinline controls class="video-manual" style="width: 100%; border: 2px solid #4a0000;">
+                        <source src="Videos/Regla3b.mp4" type="video/mp4">
+                    </video>
+                    <p><small>B) Captura Múltiple (1 vs 3 Soldados)</small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section">
+    <div class="rule-container reverse"> <div class="rule-visual">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <video loop playsinline controls class="video-manual">
+                        <source src="Videos/Regla4a.mp4" type="video/mp4">
+                    </video>
+                    <p><small>A) Soldado ➔ Guerrero</small></p>
+                </div>
+                
+                <div>
+                    <video loop playsinline controls class="video-manual">
+                        <source src="Videos/Regla4b.mp4" type="video/mp4">
+                    </video>
+                    <p><small>B) Guerrero ➔ Grifo</small></p>
+                </div>
+
+                <div>
+                    <video loop playsinline controls class="video-manual">
+                        <source src="Videos/Regla4c.mp4" type="video/mp4">
+                    </video>
+                    <p><small>C) Grifo ➔ Dragón</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rule-text">
+            <h2>Regla 4: La Cadena de Evolución</h2>
+            <p>En <em>Horda y Evolución</em>, la victoria no solo depende de cuántas piezas tienes, sino de qué tan poderosas son.</p>
+            
+            <p><strong>¿Cómo se evoluciona?</strong></p>
+            <p>Cada vez que una unidad realiza una captura exitosa, asciende de rango inmediatamente:</p>
+            
+            <ul style="list-style: none; padding: 0; line-height: 2.2;">
+                <li>⚔️ <strong>Soldado:</strong> Al capturar 2 unidades, se convierte en <strong>Guerrero</strong>.</li>
+                <li>🛡️ <strong>Guerrero:</strong> Al capturar 3 unidades, asciende a <strong>Grifo</strong>.</li>
+                <li>🦅 <strong>Grifo:</strong> Al capturar 4 unidades, alcanza su forma final: <strong>Dragón</strong>.</li>
+                <li>🐉 <strong>Dragón:</strong> La unidad suprema. No evoluciona más, pero domina el tablero.</li>
+            </ul>
+
+            <p style="background-color: #4a0000; padding: 10px; border-radius: 5px; border-left: 5px solid #d4af37;">
+                <strong>Nota del Estratega:</strong> Solo la unidad que realiza el movimiento de captura evoluciona. Los soldados recién convertidos aparecen como soldados básicos.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section">
+    <div class="rule-container"> <div class="rule-text">
+            <h2>Regla 5: Jerarquía de Poder</h2>
+            <p>En el campo de batalla, no todas las unidades tienen la misma fuerza. Una unidad solo puede capturar a enemigos de su <strong>mismo rango o inferior</strong>.</p>
+            
+            <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                <li>🛡️ <strong>Soldado:</strong> Solo captura Soldados.</li>
+                <li>⚔️ <strong>Guerrero:</strong> Captura Guerreros y Soldados.</li>
+                <li>🦅 <strong>Grifo:</strong> Captura Grifos, Guerreros y Soldados.</li>
+                <li>🐉 <strong>Dragón:</strong> ¡La unidad suprema! Captura a cualquier unidad enemiga.</li>
+            </ul>
+            
+            <p style="background-color: #1a1a1a; padding: 15px; border-left: 5px solid #ff0000; font-style: italic;">
+                "Si una unidad de rango inferior termina su movimiento junto a una de rango superior, no ocurre nada. El respeto al rango es absoluto."
+            </p>
+        </div>
+
+        <div class="rule-visual">
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="video-box">
+                    <video loop playsinline controls class="video-manual-small">
+                        <source src="Videos/Regla5a.mp4" type="video/mp4">
+                    </video>
+                    <p><small>A) Soldado ignora rangos superiores</small></p>
+                </div>
+                
+                <div class="video-box">
+                    <video loop playsinline controls class="video-manual-small">
+                        <source src="Videos/Regla5b.mp4" type="video/mp4">
+                    </video>
+                    <p><small>B) Guerrero ignora Grifos/Dragones</small></p>
+                </div>
+
+                <div class="video-box">
+                    <video loop playsinline controls class="video-manual-small">
+                        <source src="Videos/Regla5c.mp4" type="video/mp4">
+                    </video>
+                    <p><small>C) Grifo ignora al Dragón</small></p>
+                </div>
+
+                <div class="video-box">
+                    <video loop playsinline controls class="video-manual-small">
+                        <source src="Videos/Regla5d.mp4" type="video/mp4">
+                    </video>
+                    <p><small>D) Dragón: Captura total</small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Estilo para que 4 videos no ocupen toda la pantalla de golpe */
+    .video-manual-small {
+        width: 100%;
+        max-width: 350px; /* Un poco más pequeños para que quepan los 4 */
+        border: 2px solid #4a0000;
+    }
+    .video-box {
+        margin-bottom: 10px;
+    }
+</style>
+
+<section class="rule-section">
+    <div class="rule-container reverse"> <div class="rule-visual">
+            <video loop playsinline controls class="video-manual" style="border: 3px solid #003366; box-shadow: 0 0 20px rgba(0, 51, 102, 0.5);">
+                <source src="Videos/Regla6.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <p><small>Video 6: La captura resetea el rango enemigo</small></p>
+        </div>
+
+        <div class="rule-text">
+            <h2>Regla 6: El Reseteo de Rango</h2>
+            <p>La evolución es un privilegio que se pierde al ser capturado. Esta regla es fundamental para mantener el equilibrio del juego.</p>
+            
+            <p><strong>¿Qué sucede al capturar?</strong></p>
+            <p>Cuando capturas una unidad enemiga de rango superior (Guerrero, Grifo o Dragón), esta <strong>no mantiene su rango</strong>. Automáticamente se convierte en un <strong>Soldado básico</strong> de tu color.</p>
+            
+            <p style="background-color: #001a33; padding: 15px; border-left: 5px solid #0044cc; color: #fff;">
+                <strong>Ley de Guerra:</strong> La unidad que captura evoluciona (sube de rango), pero las unidades capturadas siempre involucionan (vuelven a ser soldados).
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section">
+    <div class="rule-container">
+        
+        <div class="rule-text">
+            <h2>Regla 7: El Flanqueo</h2>
+            <p><strong>Estrategia de Asedio:</strong> El flanqueo permite capturar unidades superiores mediante el posicionamiento táctico de dos unidades de rango inferior.</p>
+            
+            <p><strong>La Maniobra:</strong></p>
+            <ol>
+                <li>Dos unidades del mismo bando deben situarse en lados <strong>opuestos</strong> (horizontal o verticalmente) de una unidad enemiga de rango superior.</li>
+                <li>La unidad capturada se transforma inmediatamente en un <strong>Soldado básico</strong> de tu color.</li>
+            </ol>
+            
+            <div style="background-color: #331a00; border: 1px solid #ff9900; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                <p style="margin: 0; color: #ff9900; font-weight: bold;">⚠️ NOTA SOBRE EVOLUCIÓN:</p>
+                <p style="margin: 5px 0 0 0; font-size: 0.9rem;">
+                    A diferencia de una captura directa por jerarquía, la captura por flanqueo <strong>NO otorga evolución</strong> a las unidades que la realizan. Tus unidades mantienen su rango actual.
+                </p>
+            </div>
+        </div>
+
+        <div class="rule-visual">
+            <video loop playsinline controls class="video-manual" style="border: 4px double #d4af37;">
+                <source src="Videos/Regla7.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <p><small>Video 7: Flanqueo y conversión (Sin evolución de atacantes)</small></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section">
+    <div class="rule-container reverse">
+        
+        <div class="rule-visual">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <video loop playsinline controls class="video-manual" style="border: 2px solid #ff0000;">
+                        <source src="Videos/Regla8a.mp4" type="video/mp4">
+                    </video>
+                    <p><small>A) Contraataque: El Dragón es flanqueado por 2 Grifos</small></p>
+                </div>
+                
+                <div>
+                    <video loop playsinline controls class="video-manual" style="border: 2px solid #00ff00;">
+                        <source src="Videos/Regla8b.mp4" type="video/mp4">
+                    </video>
+                    <p><small>B) Inmunidad: El Soldado captura sin riesgo</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rule-text">
+            <h2>Regla 8: El Contraataque</h2>
+            <p><strong>Respeto a la Jerarquía:</strong> El contraataque por flanqueo solo ocurre si los defensores son del rango <strong>inmediatamente inferior</strong> al atacante.</p>
+            
+            <ul style="list-style: none; padding: 0; line-height: 1.6;">
+                <li>🐉 <strong>Dragón:</strong> Solo puede ser contra-capturado por dos <strong>Grifos</strong>.</li>
+                <li>🦅 <strong>Grifo:</strong> Solo puede ser contra-capturado por dos <strong>Guerreros</strong>.</li>
+                <li>⚔️ <strong>Guerrero:</strong> Solo puede ser contra-capturado por dos <strong>Soldados</strong>.</li>
+                <li>🛡️ <strong>Soldado:</strong> Es <strong>inmune</strong> al contraataque; puede aterrizar entre cualquier par de enemigos y capturarlos.</li>
+            </ul>
+
+            <div style="background-color: #1a0000; border: 1px solid #d4af37; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <p style="margin: 0; font-size: 0.9rem;"><em>"Si dos soldados intentan flanquear a un Dragón, el Dragón simplemente los ignora. Se requiere la fuerza de dos Grifos para derribar al Rey."</em></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section">
+    <div class="rule-container">
+        
+        <div class="rule-text">
+            <h2>Regla 9: Resolución de Captura</h2>
+            <p><strong>El Tiempo se Congela:</strong> Cuando una unidad aterriza, la captura se resuelve de forma simultánea basándose en el rango que la unidad tenía al iniciar el movimiento.</p>
+            
+            <p><strong>Límites de la Evolución:</strong></p>
+            <ul>
+                <li>Solo se capturan las piezas de <strong>rango igual o inferior</strong> al atacante.</li>
+                <li>Si la unidad evoluciona gracias a estas capturas, su nuevo poder <strong>no afecta</strong> a las piezas superiores que ya estaban adyacentes.</li>
+            </ul>
+
+            <div style="background-color: #1a1a1a; border-left: 5px solid #d4af37; padding: 15px; margin-top: 20px;">
+                <p><strong>Ejemplo del Video:</strong> Un Guerrero ataca a dos Soldados, un Guerrero y un Dragón. Captura a los tres primeros y evoluciona a Grifo, pero el Grifo y Dragón permanece intacto.</p>
+            </div>
+        </div>
+
+        <div class="rule-visual">
+            <video loop playsinline controls class="video-manual" style="border: 3px solid #d4af37;">
+                <source src="Videos/Regla9.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <p><small>Video 9: Resolución simultánea y límite de evolución</small></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="rule-section" style="padding: 50px 0;">
+    <div class="rule-container reverse" style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap;">
+        
+        <div class="rule-visual" style="flex: 1; min-width: 300px; max-width: 600px; padding: 20px;">
+            <video loop playsinline controls class="video-manual" style="width: 100%; height: auto; border: 4px solid #d4af37; border-radius: 10px; display: block;">
+                <source src="Videos/Regla10.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center; margin-top: 10px;"><small>Final de partida y conteo</small></p>
+        </div>
+
+        <div class="rule-text" style="flex: 1; min-width: 300px; padding: 30px; background: rgba(26, 0, 0, 0.9); border-radius: 15px; margin: 20px; z-index: 10;">
+            <h2 style="color: #d4af37;">Regla 10: El Destino de la Horda</h2>
+            <p>La batalla termina cuando el tablero de 49 casillas queda completamente reclamado.</p>
+            
+            <div style="border-left: 5px solid #d4af37; padding-left: 15px;">
+                <h3 style="color: #d4af37;">¿Quién gana?</h3>
+                <p><strong>Por Mayoría:</strong> Al llenarse el tablero, gana el bando con más presencia.</p>
+                <p><strong>Por Eliminación:</strong> Si borras al enemigo antes de llenar el tablero, la victoria es inmediata.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="premium-section" style="padding: 80px 20px; background: #000; border-top: 3px solid #d4af37;">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="color: #d4af37; font-size: 2.5rem;">CONTENIDO PREMIUM</h2>
+        <p style="color: #888;">Nuevas dimensiones de estrategia para el jugador experto.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="premium-card" style="background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333;">
+            <img src="Images/Modo9x9.jpg" alt="Tablero 9x9" style="width: 100%; height: 220px; object-fit: cover;">
+            <div style="padding: 20px;">
+                <h3 style="color: #d4af37;">Modo 9x9: Gran Escala</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">Estrategias extendidas en un campo de 81 casillas. Elige tu postura: ¿Ofensiva total o defensa impenetrable?</p>
+            </div>
+        </div>
+
+        <div class="premium-card" style="background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333;">
+            <video loop playsinline controls style="width: 100%; height: 220px; background: #000; object-fit: cover;">
+                <source src="Videos/ModoTiempo.mp4" type="video/mp4">
+            </video>
+            <div style="padding: 20px;">
+                <h3 style="color: #d4af37;">Modo Tiempo: 5 Segundos</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">Presión absoluta. Piensa rápido o escucha la caída de la espada marcando el final de tu turno.</p>
+            </div>
+        </div>
+
+        <div class="premium-card" style="background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333;">
+            <div style="position: relative;">
+                <img src="Images/ModoPuntos.jpg" alt="Puntuación" style="width: 100%; height: 220px; object-fit: cover; opacity: 0.6;">
+                <div style="position: absolute; top: 10px; left: 10px; color: #fff; font-size: 0.8rem; background: rgba(0,0,0,0.7); padding: 5px;">
+                    S:1 | G:3 | F:4 | D:7
+                </div>
+            </div>
+            <div style="padding: 20px;">
+                <h3 style="color: #d4af37;">Modo Puntos: Carrera a 50</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">La calidad supera a la cantidad. Evoluciona tus piezas para ser el primero en alcanzar los 50 puntos de victoria.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    </body>
+</html>
