@@ -5,99 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horda y Evolución - Manual Oficial</title>
     
-    <style>
-        /* 1. DECLARACIÓN DE FUENTE Y ESTILOS GENERALES */
-        @font-face {
-            font-family: 'IMFellEnglishSC';
-            src: url('Font/IMFellEnglishSC-Regular.ttf') format('truetype');
-        }
+<style>
+    /* 1. DECLARACIÓN DE FUENTE Y ESTILOS GENERALES */
+    @font-face {
+        font-family: 'IMFellEnglishSC';
+        src: url('Font/IMFellEnglishSC-Regular.ttf') format('truetype');
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Fondo casi negro */
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212; /* Fondo casi negro */
+        color: #e0e0e0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        /* 2. DISEÑO DEL ENCABEZADO (HEADER) */
-        header {
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/image_56695f.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 4px solid #4a0000;
-        }
+    /* 2. DISEÑO DEL ENCABEZADO (HEADER) */
+    header {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/image_56695f.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px;
+        text-align: center;
+        border-bottom: 4px solid #4a0000;
+    }
 
-        .logo-hye {
-            width: 180px;
-            margin-bottom: 15px;
-        }
+    .logo-hye {
+        width: 180px;
+        margin-bottom: 15px;
+    }
 
-        h1 {
-            font-family: 'IMFellEnglishSC', serif;
-            font-size: 3.5em;
-            margin: 0;
-            color: #fff;
-            text-shadow: 2px 2px 4px #000;
-        }
+    h1 {
+        font-family: 'IMFellEnglishSC', serif;
+        font-size: 3.5em;
+        margin: 0;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
 
-        .tagline {
-            font-family: 'IMFellEnglishSC', serif;
-            font-size: 1.5em;
-            color: #d4af37;
-        }
+    .tagline {
+        font-family: 'IMFellEnglishSC', serif;
+        font-size: 1.5em;
+        color: #d4af37;
+    }
 
-        /* 3. DISEÑO DE LAS SECCIONES DE REGLAS */
-        .rule-section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            border-bottom: 1px solid #333;
-        }
+    /* 3. DISEÑO DE LAS SECCIONES DE REGLAS */
+    .rule-section {
+        padding: 50px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-bottom: 1px solid #333;
+    }
 
-        .rule-container {
-            display: flex;
-            flex-wrap: wrap; /* Para que en celular se ponga uno abajo de otro */
-            align-items: center;
-            gap: 40px;
-        }
+    .rule-container {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+        gap: 40px;
+    }
 
-        .rule-text {
-            flex: 1;
-            min-width: 320px;
+    /* EFECTO ZIG-ZAG: Solo se activa en pantallas grandes */
+    @media (min-width: 769px) {
+        .rule-container.reverse {
+            flex-direction: row-reverse;
         }
+    }
 
-        .rule-text h2 {
-            font-family: 'IMFellEnglishSC', serif;
-            color: #d4af37;
-            font-size: 2.2em;
-            margin-top: 0;
-        }
+    .rule-text {
+        flex: 1;
+        min-width: 320px;
+    }
 
-        .rule-text p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
+    .rule-text h2 {
+        font-family: 'IMFellEnglishSC', serif;
+        color: #d4af37;
+        font-size: 2.2em;
+        margin-top: 0;
+    }
 
-        .rule-visual {
-            flex: 1;
-            min-width: 320px;
-            text-align: center;
-        }
+    .rule-text p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
 
-        .rule-visual img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #4a0000;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-        }
+    .rule-visual {
+        flex: 1;
+        min-width: 320px;
+        text-align: center;
+    }
 
-        strong {
-            color: #fff;
-        }
-    </style>
+    .rule-visual img, .video-manual {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #4a0000;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    }
+
+    strong {
+        color: #fff;
+    }
+</style>
 </head>
 <body>
 
@@ -486,16 +493,27 @@
     </div>
 </section>
 
-<footer style="text-align: center; padding: 20px; color: #f2c94c; font-family: 'Cinzel', serif; font-size: 0.9em;">
-    <hr style="border: 0; border-top: 1px solid #444; margin-bottom: 20px;">
-    <p>&copy; 2025 Eduardo Nosti Pulido. Todos los derechos reservados.</p>
-</footer>
+<section style="padding: 60px 20px; text-align: center; background: #000; border-top: 3px solid #d4af37;">
+        <div style="max-width: 500px; margin: 0 auto; border: 2px solid #d4af37; padding: 30px; border-radius: 20px; background: rgba(26, 0, 0, 0.5);">
+            <h2 style="font-family: 'IMFellEnglishSC', serif; color: #d4af37; font-size: 2.2em; margin-bottom: 10px;">¡ÚNETE A LA HORDA!</h2>
+            <p style="color: #e0e0e0; margin-bottom: 25px;">Escanea este código para llevar la batalla a tu dispositivo Android.</p>
+            
+            <div style="display: inline-block; padding: 10px; background: #fff; border-radius: 15px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);">
+                <img src="hye-qr-code.png" alt="QR Horda y Evolución" style="width: 250px; display: block;">
+            </div>
+            
+            <p style="margin-top: 20px; font-family: 'IMFellEnglishSC', serif; color: #d4af37;">¡Evo te espera en el campo de batalla!</p>
+        </div>
+    </section>
 
-<p>
-    <a href="politicas.html" style="color: #f2c94c; text-decoration: underline; font-size: 0.8em;">Política de Privacidad</a>
-</p>
-    
-    </body>
+    <footer style="text-align: center; padding: 40px 20px; color: #f2c94c; font-family: 'Cinzel', serif; font-size: 0.9em;">
+        <hr style="border: 0; border-top: 1px solid #444; margin-bottom: 20px;">
+        <p>&copy; 2025 Eduardo Nosti Pulido. Todos los derechos reservados.</p>
+        <p>
+            <a href="politicas.html" style="color: #f2c94c; text-decoration: underline; font-size: 0.8em;">Política de Privacidad</a>
+        </p>
+    </footer>
 
+</body>
 </html>
 
