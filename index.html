@@ -8,103 +8,68 @@
 <style>
     /* 1. DECLARACIÓN DE FUENTE Y ESTILOS GENERALES */
     @font-face {
-        font-family: 'IMFellEnglishSC';
-        src: url('Font/IMFellEnglishSC-Regular.ttf') format('truetype');
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #121212; /* Fondo casi negro */
-        color: #e0e0e0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* 2. DISEÑO DEL ENCABEZADO (HEADER) */
-    header {
-        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/image_56695f.jpg');
-        background-size: cover;
-        background-position: center;
-        padding: 60px 20px;
-        text-align: center;
-        border-bottom: 4px solid #4a0000;
-    }
-
-    .logo-hye {
-        width: 180px;
-        margin-bottom: 15px;
-    }
-
-    h1 {
-        font-family: 'IMFellEnglishSC', serif;
-        font-size: 3.5em;
-        margin: 0;
-        color: #fff;
-        text-shadow: 2px 2px 4px #000;
-    }
-
-    .tagline {
-        font-family: 'IMFellEnglishSC', serif;
-        font-size: 1.5em;
-        color: #d4af37;
-    }
-
-    /* 3. DISEÑO DE LAS SECCIONES DE REGLAS */
-    .rule-section {
-        padding: 50px 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-        border-bottom: 1px solid #333;
-    }
-
-    .rule-container {
-        display: flex;
-        flex-wrap: wrap; 
-        align-items: center;
-        gap: 40px;
-    }
-
-    /* EFECTO ZIG-ZAG: Solo se activa en pantallas grandes */
-    @media (min-width: 769px) {
-        .rule-container.reverse, 
-        .rule-section .reverse {
-            flex-direction: row-reverse !important;
+            font-family: 'IMFellEnglishSC';
+            src: url('Font/IMFellEnglishSC-Regular.ttf') format('truetype');
         }
-    }
 
-    .rule-text {
-        flex: 1;
-        min-width: 320px;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .rule-text h2 {
-        font-family: 'IMFellEnglishSC', serif;
-        color: #d4af37;
-        font-size: 2.2em;
-        margin-top: 0;
-    }
+        /* 2. DISEÑO DEL ENCABEZADO */
+        header {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/image_56695f.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #4a0000;
+        }
 
-    .rule-text p {
-        font-size: 1.1em;
-        line-height: 1.6;
-    }
+        .logo-hye { width: 180px; margin-bottom: 15px; }
+        h1 { font-family: 'IMFellEnglishSC', serif; font-size: 3.5em; margin: 0; color: #fff; text-shadow: 2px 2px 4px #000; }
+        .tagline { font-family: 'IMFellEnglishSC', serif; font-size: 1.5em; color: #d4af37; }
 
-    .rule-visual {
-        flex: 1;
-        min-width: 320px;
-        text-align: center;
-    }
+        /* 3. DISEÑO DE LAS SECCIONES Y EL ZIG-ZAG */
+        .rule-section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-bottom: 1px solid #333;
+        }
 
-    .rule-visual img, .video-manual {
-        max-width: 100%;
-        height: auto;
-        border: 2px solid #4a0000;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-    }
+        .rule-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
 
-    strong {
-        color: #fff;
-    }
+        /* ESTA ES LA REGLA QUE RECUPERA EL ZIG-ZAG */
+        @media (min-width: 769px) {
+            .reverse {
+                flex-direction: row-reverse !important;
+            }
+        }
+
+        .rule-text { flex: 1; min-width: 320px; }
+        .rule-text h2 { font-family: 'IMFellEnglishSC', serif; color: #d4af37; font-size: 2.2em; margin-top: 0; }
+        .rule-text p { font-size: 1.1em; line-height: 1.6; }
+
+        .rule-visual { flex: 1; min-width: 320px; text-align: center; }
+        .rule-visual img, .video-manual, .video-manual-small {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #4a0000;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+        }
+
+        strong { color: #fff; }
+        .video-box { margin-bottom: 10px; }
 </style>
 </head>
 <body>
@@ -517,5 +482,6 @@
 
 </body>
 </html>
+
 
 
