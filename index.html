@@ -66,8 +66,9 @@
 
     /* EFECTO ZIG-ZAG: Solo se activa en pantallas grandes */
     @media (min-width: 769px) {
-        .rule-container.reverse {
-            flex-direction: row-reverse;
+        .rule-container.reverse, 
+        .rule-section .reverse {
+            flex-direction: row-reverse !important;
         }
     }
 
@@ -516,4 +517,5 @@
 
 </body>
 </html>
+
 
